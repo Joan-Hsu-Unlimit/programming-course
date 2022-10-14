@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main(void)
+{	
+	//float 用於宣告浮點數(非整數與負數) 
+	float a,b,c,s;
+	//make the notice
+	printf("請輸入一元二次方程式(ax^2+bx+c=0)之係數\n");
+	//you can print and scan a,b, and c separatedly
+	printf("a: ");
+	scanf("%f",&a);
+	printf("b: ");
+	scanf("%f",&b);
+	printf("c: ");
+	scanf("%f",&c);
+	//define func.
+	s=(b*b)-(4*a*c);
+	//%f means the float number,s
+	printf("x=%f",(float)s);
+
+system("pause");
+return 0;
+}
