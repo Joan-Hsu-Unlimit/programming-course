@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+//learn how to use a+=b
+int main(void)
+{
+	int a=3,b=5;
+	printf("計算前: a=%d , b=%d\n",a,b);
+	a+=b;
+	printf("計算後: a=%d , b=%d\n",a,b);
+	
+	a-=b;
+	printf("計算後: a=%d , b=%d\n",a,b);
+	
+	a*=b;
+	printf("計算後: a=%d , b=%d\n",a,b);	 
+	
+	a/=b;
+	printf("計算後: a=%f , b=%d\n",(float)a,b);
+	
+
+	
+	system("pause");
+	return 0;
+}
