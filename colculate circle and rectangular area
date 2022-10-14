@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+//colculate circle and rectangular area 
+int main(void)
+{
+    float a,b,c;
+    printf("請輸入一個圓的直徑:");
+    scanf("%f",&a); 
+	printf("請輸入矩形的寬:");
+    scanf("%f",&b);
+    printf("請輸入矩形的長:");
+    scanf("%f",&c);
+    
+	if(a>0)
+	{
+		//%.3f 使浮點數顯示到小數點第三位 
+	    printf("圓的面積為:%.3f\n",0.785*a*a);
+        printf("圓的周長為:%.3f\n",a*3.14);
+      }
+	else
+        printf("直徑沒有負數呦~\n");
+
+    //if(條件1 && 條件2) 為條件1和2都符合時即進入迴圈 
+    if(b>0 && c>0)
+    {
+	    printf("矩形面積:%.3f\n",b*c);
+        printf("矩形周長為:%.3f\n",2*(b+c));
+      }
+	else
+        printf("面積沒有負數呦~\n");
+        
+    if(0.785*a*a>b*c && 0.785*a*a>0 && b*c>0)
+        printf("圓的面積:%.3f > 矩形面積:%.3f\n",0.785*a*a,b*c);
+           
+	if(0.785*a*a<b*c && 0.785*a*a>0 && b*c>0) 
+	    printf("圓的面積:%.3f > 矩形面積:%.3f\n",0.785*a*a,b*c);
+	
+	if(0.785*a*a==b*c && 0.785*a*a>0 && b*c>0) 
+	    printf("圓的面積:%.3f = 矩形面積:%.3f\n",0.785*a*a,b*c);
+	    
+	if(a*3.14>2*(b+c) && a*3.14>0 && 2*(b+c)>0)
+	    printf("圓的周長:%.3f > 矩形的周長:%.3f\n",a*3.14,2*(b+c));
+	 
+    if(a*3.14<2*(b+c) && a*3.14>0 && 2*(b+c)>0)
+	    printf("圓的周長:%.3f < 矩形的周長:%.3f\n",a*3.14,2*(b+c));
+        
+    if(a*3.14==2*(b+c) && a*3.14>0 && 2*(b+c)>0)
+	    printf("圓的周長:%.3f = 矩形的周長:%.3f\n",a*3.14,2*(b+c));
+	    
+    system("pause");
+	return 0;
+}
