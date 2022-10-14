@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+//crete a calculator
+{
+	int a,b;
+	//when run to "goto start", the program will come back to "start" 
+	start:
+	//char define 字符 
+	char oper;
+	//input運算式
+	printf("請輸入運算式a(+-*/)b:");
+	scanf("%d %c %d",&a,&oper,&b);
+	
+	/*switch(put here an element)
+	{
+		case'put the type of the element':
+		break; 
+	}
+	*/
+	switch(oper)
+	{
+		//when oper is + ,run case'+'
+		case'+':  
+		printf(" %d + %d = %d\n",a,b,a+b);
+		//The break statement ends the loop immediately when it is encountered
+		break; 
+		//when oper is - ,run case'-'
+		case'-':
+		printf(" %d - %d = %d\n",a,b,a-b);
+		break;
+		//when oper is * ,run case'*'
+		case'*':
+		printf(" %d * %d = %d\n",a,b,a*b);
+		break;
+		//when oper is / ,run case'/'
+		case'/':
+		printf(" %d / %d = %f\n",a,b,(float)a/b);
+		break;
+		//default means that oper doesn't fit all of the case
+		default:
+			printf("無法辨識~");
+	}
+    //back to row 9
+	goto start;
+    system("pause");
+    return 0;
+    
+}
