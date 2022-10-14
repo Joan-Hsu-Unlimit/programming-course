@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+//change score into level A to C
+int main(void)
+{
+	int score;
+	printf("your score:");
+	scanf("%d",&score);
+	//if...else if...else
+	if(score>=80)
+	    printf("%d is A\n",score);
+	else if(score>=70)
+	    printf("%d is B\n",score);
+	    else if(score>=60)
+	        printf("%d is C\n",score);
+	        //if score<60 print failed
+	        else
+	            printf("Failed!!\n");
+	
+	system("pause");
+	return 0;
+}
