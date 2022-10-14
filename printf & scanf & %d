@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	int x,f;
+	//print x:
+	printf("x:");
+	//read the word you type
+	scanf("%d",&x);
+	//set func.
+	f=2*x+3;
+	//print result 
+	printf("f(%d)=%d\n",x,f);
+	  
+    
+    
+	system("pause");
+	return 0;
+}
