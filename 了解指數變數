@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+//了解 指數變數
+int main (void)
+{
+
+	int a,b;
+	int *ptr1,*ptr2;
+	a=100;
+	b=99;
+	ptr1=&a;
+	ptr2=&b;
+	printf("a + b = %d\n",*ptr1+*ptr2);//沒*是位置;有*是把位置的東西拿出來 
+	printf("adress of a=%d\n",&ptr1);
+	printf("%d,%d,%d\n",ptr1,*ptr1,&a);
+
+	system ("pause");
+ 	return 0;
+
+}
+
