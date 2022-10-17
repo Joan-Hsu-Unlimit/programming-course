@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#define size 5
+//氣泡排序法 
+void show(int a[]),bubble(int a[]);
+int main(void)
+{
+	int data[size]={26,5,81,7,63};
+	printf("排序前...\n");
+	show(data);
+	//bubble()將data由大至小排列 
+	bubble(data);
+	printf("排序後...\n");
+	show(data);
+
+	
+	system ("pause");
+ 	return 0;
+	
+	
+}
+void show(int a[])
+{
+	int i;
+	for(i=0;i<size;i++)
+		printf("%d",a[i]);
+	printf("\n");
+	
+	
+}
+void bubble (int a[])
+{
+	int i,j,temp;
+	for(i=1;i<size;i++)
+	{ 
+		for(j=0;j<(size-1);j++)
+		{ 
+			if(a[j]>a[j+1])
+			{
+				temp=a[j];
+				a[j]=a[j+1];
+				a[j+1]=temp;
+			}
+		} 
+	}
+}
+
