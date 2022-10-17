@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+//修改路徑中txt檔文字 
+int ff(int );
+int main (void)
+{
+	FILE*f;
+	int i;
+	f=fopen("D:\\學業\\程式設計\\temp\\text.txt","w"); 
+	for(i=1;i<=20;i++)
+		fprintf(f,"%d %d\n",i,ff(i));
+		 
+	
+	fclose(f);
+
+ 	system ("pause");
+ 	return 0;
+
+}
+int ff(int i)
+{
+	return 2*i*i*i-4*i*i-12;
+}
