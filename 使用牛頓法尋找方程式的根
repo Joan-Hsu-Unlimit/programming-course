@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+//牛頓法：使用函數{\displaystyle f(x)}f(x)的泰勒級數的前面幾項來尋找方程式{\displaystyle f(x)=0}f(x)=0的根 
+float f(float ,float ,float ,float );
+float fd(float ,float ,float );
+int main (void)
+{
+	float a,b,c,x0,x1,error,esp;
+	int n,max_itera;
+	max_itera=100;
+	printf("input a,b,c:");
+	scanf("%f,%f,%f",&a,&b,&c);
+	printf("x0:");
+	scanf("%f",&x0);
+	printf("xesp:");
+	scanf("%f",&esp);
+	printf("max_itera:");
+	scanf("%f",&max_itera);
+	n=0;
+	do
+	{
+		x1=x0-f(a,b,c,x0)/fd(a,b,x0);
+		error=fabs(f(a,b,c,x1)-f(a,b,c,x0));
+		x0=x1;
+		n++;
+	}while(error>=esp && n<=max_itera);
+	printf("迭代之次數:%d,x=%.4f",n,x1);
+	
+
+ 	system ("pause");
+ 	return 0;
+
+}
+float f(float a,float b,float c,float x)
+{
+	return a*x*x+b*x+c;
+}
+float fd(float a,float b,float x)
+{
+	return 2*a*x+b;
+}
+
+
+
+
+
+
+
