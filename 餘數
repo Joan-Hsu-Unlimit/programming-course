@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	int a,b;
+
+    printf("a,b: ");
+    scanf("%d,%d",&a,&b);
+    if(a>b)
+        printf("%d > %d\n",a,b);
+	if(a<b)
+	    printf("%d < %d\n",a,b);     
+    if(a==b)
+        printf("%d == %d\n",a,b);      
+    printf("餘數=%d\n",a%b);     //a%b 表a除以b的餘數 
+    
+	system("pause");
+	return 0;
+}
