@@ -1,0 +1,60 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+
+/*
+float f(float);
+int main(void)
+
+{
+
+	int n;
+	printf("請指定n階層之整數n:");
+	scanf("%d",&n);
+	printf("%d!=%f",n,f(n));
+	
+}
+float f(float n)
+{
+	float sum=1;
+	for(int i=1;i<=n;i++)
+		sum=sum*i;
+		
+}
+*/
+int fac(int);
+int fn(int);
+int main(void)
+{
+	int n;
+	printf("compute n!\n");
+	do{
+		printf("n:");
+		scanf("%d",&n);
+	}while(n<0);
+	printf("%d!=%d\n",n,fac(n));
+	printf("%d!=%d\n",n,fn(n));
+	system ("pause");
+	return 0;
+	
+}
+
+int fn(int n)
+{
+	int prod=1;
+	for(int i=1;i<=n;i++)
+		prod=prod*i;
+		
+	return prod;
+	
+	
+}
+int fac(int n)
+{
+	if(n>0)
+		return n*fac(n-1);
+	else
+		return 1;
+}
+
+
