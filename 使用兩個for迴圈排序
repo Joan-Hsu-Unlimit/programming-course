@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+//使用兩個for迴圈排序 
+int main (void)
+{
+	int number;
+	int i,n,j,k,temp,index;
+	printf("number=");
+	scanf("%d",&number);
+	int a[number];
+	for(i=0;i<number;i++)
+	{
+		printf("input number %d:",i+1);
+		scanf("%d",&a[i]);
+	}
+	n=number-1;
+	for(j=0;j<n;j++)
+	{
+		temp=a[j];
+		index=j;
+		for(k=j+1;k<=n;k++)
+		{
+			if(a[k]<temp)
+			{
+				temp=a[k];
+				index=k;
+			}
+		}
+		a[index]=a[j];
+		a[j]=temp;
+	}
+	printf("after the selection sort\n");
+	for(i=0;i<number;i++)
+		printf("a[%d]=%d\n",i+1,a[i]);
+
+ 	system ("pause");
+ 	return 0;
+}
+
